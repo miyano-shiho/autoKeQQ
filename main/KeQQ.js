@@ -1,1 +1,198 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('J d {    n =        \'<u 19="S-23" 1U="18://15.M/1v/1Z-1f-Q/1G/1r/u/1s.2d"></u>\' +        \'<T 19="1W-z" 1V="1B: X; 1h: -4; 2e: 9; 17: 9; 26: a; y: t; C-1E: 0 7% 7% 0;" 25="脚本"></T>\' +        \'<T 19="24" 1V="2e: 7; 17: b; 1z: V V 4 b; 1B: X; 26: 8; 1h: -8; C-1E: 5; y: t;">\' +        \'<2b 1V="1k-1V-29: 1x;"><1j 1V="1q-D: V"><T>当前时间:<1T 19="22"> 0:5 </1T></T></1j>\' +        // \'<1j 1V="1q-D: V"><T>共计签到:<1T 19="1y-v-1n"> 0 </1T>次.</T></1j>\' +        // \'<1j 1V="1q-D: 4"><T>共计答题:<1T 19="1y-v-p"> 0 </1T>次.</T></1j>\' +        \'<1j J="2a-1j" 19="1X-v-1n" 1V="1q-D: V; P:16"><T><1g Z="I-v-1n">自动签到: </1g><1c 19="I-v-1n" 1V="27: 1M(5.b);" 29="I"/></T></1j>\' +        \'<1j J="2a-1j" 19="1X-v-p" 1V="1q-D: V; P:16"><T><1g Z="I-v-p">自动答题: </1g><1c 19="I-v-p" 1V="27: 1M(5.b);" 29="I"/></T></1j>\' +        \'<1j J="2a-1j" 19="1X-v-1t"><T><1g Z="I-v-1t">静音开关: </1g><1c 19="I-v-1t" 1V="27: 1M(5.b);" 29="I"/></T></1j></2b></T>\';    V = W;    O($, 1o, q, A) {        N.1m(\'构造函数被执行\');        21.$ = $;        21.1o = 1o;        21.q = q;        21.A = A;    }    m = 28;    12 1n() {        1K 21.m;    }    1Q 1n(2c) {        21.m = 2c;    }    g = 28;    12 p() {        1K 21.g;    }    1Q p(2c) {        21.g = 2c;    }    l = W;    12 1d() {        1K 21.l;    }    1Q 1d(2c) {        21.l = 2c;    }    k = 28;    12 K() {        1K 21.k;    }    1Q K(2c) {        21.k = 2c;    }    1L = 0;    12 1p() {        1K 21.1L;    }    1Q 1p(2c) {        21.1L = 2c;    }    h = 0;    12 r() {        1K 21.h;    }    1Q r(2c) {        21.h = 2c;    }    i = [];    12 F() {        1K 21.i;    }    1Q F(2c) {        21.i = 2c;    }    j = "";    12 G() {        1K 21.j;    }    1Q G(2c) {        21.j = 2c;    }    /*        类方法     */    o() {        N.1m(\'o函数执行\');        $(\'#1I-B\').1L(21.n);    };    1u() {        21.l = !21.l;    }    /*      自动签到      检测目标按钮的20属性判断其是否为签到或确定     */    x() {        1a (21.m) {            N.1m(\'自动签到模块已生效\');            1i R = 1w c();            21.j = $(21.1o);            1a (21.j && 21.j.20()) {                1i 1Y = 21.j.20();                1a (1Y === \'签到\' || 1Y === \'确定\') {                    21.j.L();                    1a (1Y === \'签到\') {                        $(\'#S-23\')[0].1A();                        21.1L += 5;                        21.i.1D(R.13() + " : " + R.14() + " "" + \'签到任务\' + ""被执行");                    }                }            }        }    }    /*        自动答题, 可关闭     */    w() {        1i R = 1w c();        1a (21.g) {            N.1m(\'自动答题模块已生效\');            21.j = $(21.q);            1a (21.j && 21.j.20()) {                N.1m(21.j);                1i 1Y = 21.j.20();                1a (1Y === \'单选题\' && $(\'.1L-E--1C\')) {                    1i 1N = e.Y(e.1F() * 7);                    $(\'.1L-V-1H-1e\')[1N].L();                    // 21.h += 5;                    // 21.i.1D(R.13() + " : " + R.14() + " "" + \'多选题\' + ""被执行");                } U 1a (1Y === \'多选题\' && $(\'.1L-E--1C\')) {                    1i 1O = e.Y(e.1F() * 7);                    $(\'.1L-V-1H-1e\')[1O].L();                    1i 1P = e.Y(e.1F() * 7);                    $(\'.1L-V-1H-1e\')[1P].L();                    // 21.h += 5;                    // 21.i.1D(R.13() + " : " + R.14() + " "" + \'多选题\' + ""被执行");                }                1R(11 () {                    $(21.1o).L();                }, 1 * 5);            }        }    }    H() {        1a (21.k) {            N.1m(\'课堂检测模块正在执行, 正在进入教室...\');            1a ($(21.A).20() === \'老师已经下课了！\') {                2f.1l.1J();            } U {                $(\'#S-23\')[0].1A();                21.k = W;            }        }    }    1S() {        21.i.10(11 (1b) {        })    }}',62,140,'|1000|10px|128px|15px|2|20px|3|300px|30px|350px|6|Date|KeData|Math|_another|_answer|_answerCnt|_businessLog|_certainText|_classClose|_isMute|_login|_uiDoc|addUi|answer|answerClassname|answerCnt|append|aquamarine|audio|auto|autoAnswer|autoLogin|background|ball|beginningClassname|body|border|bottom|btn|businessLog|certainText|checkBeginning|checkbox|class|classClose|click|com|console|constructor|cursor|data|date|ding|div|else|f|false|fixed|floor|for|forEach|function|get|getHours|getMinutes|gitee|hand|height|https|id|if|index|input|isMute|item|ke|label|left|let|li|list|location|log|login|loginClassname|loginCnt|margin|master|message|mute|muteTeacher|nakara|new|none|num|padding|play|position|primary|push|radius|random|raw|rc|react|reload|return|s|scale|select|select2|select3|set|setTimeout|showLog|span|src|style|suspended|switch|tempText|tencent|text|this|time|tip|tips|title|top|transform|true|type|ui|ul|value|wav|width|window'.split('|'),0,{}))
+/*
+    脚本功能:
+    1. 自动签到
+    2. 自动答题
+    3. 检测老师是否进入课堂
+    4. 进入课堂自动静音
+    5. 待定
+
+    将这五种功能作为 keData 的参数创建对象, 以初始化每种功能的运行或停用
+*/
+class KeData {
+
+    _uiDoc =
+        '<audio id="ding-tip" src="https://gitee.com/nakara/tencent-ke-data/raw/master/audio/message.wav"></audio>' +
+        '<div id="suspended-ball" style="position: fixed; left: -15px; width: 30px; height: 30px; top: 350px; background: aquamarine; border-radius: 0 100% 100% 0;" title="脚本"></div>' +
+        '<div id="tips" style="width: 128px; height: 110px; padding: 5px 5px 15px 20px; position: fixed; top: 300px; left: -300px; border-radius: 10px; background: aquamarine;">' +
+        '<ul style="list-style-type: none;"><li style="margin-bottom: 5px"><div>当前时间:<span id="time"> 0:00 </span></div></li>' +
+        // '<li style="margin-bottom: 5px"><div>共计签到:<span id="num-auto-login"> 0 </span>次.</div></li>' +
+        // '<li style="margin-bottom: 15px"><div>共计答题:<span id="num-auto-answer"> 0 </span>次.</div></li>' +
+        '<li class="ui-li" id="switch-auto-login" style="margin-bottom: 5px; cursor:hand"><div><label for="checkbox-auto-login">自动签到: </label><input id="checkbox-auto-login" style="transform: scale(1.6);" type="checkbox"/></div></li>' +
+        '<li class="ui-li" id="switch-auto-answer" style="margin-bottom: 5px; cursor:hand"><div><label for="checkbox-auto-answer">自动答题: </label><input id="checkbox-auto-answer" style="transform: scale(1.6);" type="checkbox"/></div></li>' +
+        '<li class="ui-li" id="switch-auto-mute"><div><label for="checkbox-auto-mute">静音开关: </label><input id="checkbox-auto-mute" style="transform: scale(1.6);" type="checkbox"/></div></li></ul></div>';
+    _another = false;
+
+    constructor($, loginClassname, answerClassname, beginningClassname) {
+        console.log('构造函数被执行');
+        this.$ = $;
+        this.loginClassname = loginClassname;
+        this.answerClassname = answerClassname;
+        this.beginningClassname = beginningClassname;
+    }
+
+    _login = true;
+
+    get login() {
+        return this._login;
+    }
+
+    set login(value) {
+        this._login = value;
+    }
+
+    _answer = true;
+
+    get answer() {
+        return this._answer;
+    }
+
+    set answer(value) {
+        this._answer = value;
+    }
+
+    _isMute = false;
+
+    get isMute() {
+        return this._isMute;
+    }
+
+    set isMute(value) {
+        this._isMute = value;
+    }
+
+    _classClose = true;
+
+    get classClose() {
+        return this._classClose;
+    }
+
+    set classClose(value) {
+        this._classClose = value;
+    }
+
+    _loginCnt = 0;
+
+    get loginCnt() {
+        return this._loginCnt;
+    }
+
+    set loginCnt(value) {
+        this._loginCnt = value;
+    }
+
+    _answerCnt = 0;
+
+    get answerCnt() {
+        return this._answerCnt;
+    }
+
+    set answerCnt(value) {
+        this._answerCnt = value;
+    }
+
+    _businessLog = [];
+
+    get businessLog() {
+        return this._businessLog;
+    }
+
+    set businessLog(value) {
+        this._businessLog = value;
+    }
+
+    _certainText = "";
+
+    get certainText() {
+        return this._certainText;
+    }
+
+    set certainText(value) {
+        this._certainText = value;
+    }
+
+
+    /*
+        类方法
+     */
+    addUi() {
+        console.log('addUi函数执行');
+        $('#react-body').append(this._uiDoc);
+    };
+
+    muteTeacher() {
+        this._isMute = !this._isMute;
+    }
+
+    /*
+      自动签到
+      检测目标按钮的text属性判断其是否为签到或确定
+     */
+    autoLogin() {
+        if (this._login) {
+            console.log('自动签到模块已生效');
+            let date = new Date();
+            this._certainText = $(this.loginClassname);
+            if (this._certainText && this._certainText.text()) {
+                let tempText = this._certainText.text();
+                if (tempText === '签到' || tempText === '确定') {
+                    this._certainText.click();
+                    if (tempText === '签到') {
+                        $('#ding-tip')[0].play();
+                        this._loginCnt += 1;
+                        this._businessLog.push(date.getHours() + " : " + date.getMinutes() + " \"" + '签到任务' + "\"被执行");
+                    }
+                }
+            }
+        }
+    }
+
+    /*
+        自动答题, 可关闭
+     */
+    autoAnswer() {
+        let date = new Date();
+        if (this._answer) {
+            console.log('自动答题模块已生效');
+            this._certainText = $(this.answerClassname);
+            if (this._certainText && this._certainText.text()) {
+                console.log(this._certainText);
+                let tempText = this._certainText.text();
+                if (tempText === '单选题' && $('.s-btn--primary')) {
+                    let select = Math.floor(Math.random() * 3);
+                    $('.s-f-rc-item')[select].click();
+                    // this._answerCnt += 1;
+                    // this._businessLog.push(date.getHours() + " : " + date.getMinutes() + " \"" + '多选题' + "\"被执行");
+                } else if (tempText === '多选题' && $('.s-btn--primary')) {
+                    let select2 = Math.floor(Math.random() * 3);
+                    $('.s-f-rc-item')[select2].click();
+                    let select3 = Math.floor(Math.random() * 3);
+                    $('.s-f-rc-item')[select3].click();
+                    // this._answerCnt += 1;
+                    // this._businessLog.push(date.getHours() + " : " + date.getMinutes() + " \"" + '多选题' + "\"被执行");
+                }
+
+                setTimeout(function () {
+                    $(this.loginClassname).click();
+                }, 1000 * 2);
+            }
+        }
+    }
+
+    checkBeginning() {
+        if (this._classClose) {
+            console.log('课堂检测模块正在执行, 正在进入教室...');
+            if ($(this.beginningClassname).text() === '老师已经下课了！') {
+                window.location.reload();
+            } else {
+                $('#ding-tip')[0].play();
+                this._classClose = false;
+            }
+        }
+    }
+
+    showLog() {
+        this._businessLog.forEach(function (index) {
+
+        })
+    }
+}
